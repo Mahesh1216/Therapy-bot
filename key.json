@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "gen-lang-client-0102375772",
+  "private_key_id": "a69b86bbee2307d4e9b67e5af5352bc802b5bfce",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCui7n0r0DxP79G\nTjpamUeqkFdfJdqO+IOoJIeLZB3G9AgL/Ja7Irxi4aeJ3/ycbjBtZ/eRqUuCg54S\nNt07Bx2KmpzkPkJ3d6OD5+WN4h/2YkxQMVT2BQtWVFy7syIfvYdoHnlWNQEWGa2f\ndKbBEZlhZieKGylNRMaUTBLND++zrUCBY9av9fO18qPnoME6OoJWpPt9KQcnUSqW\nOcW0+ymibQLRETUP3aC7hCX8YPWUGslkn4QvvAHR36uU0DIDmXe4KWcZgjK+6lm2\nzHMwK6oDiPtpB+lATpDjOT7EtQDRXjrYoSxmjuJLA6vaNCybp6ZYt+UXMnCGbEhp\nPt7txFSlAgMBAAECggEARo+CwZk1cjF4hBXsviJX1+pY/8RgOcraAleeGeoDpaGS\nPTJDxuvwZzLc1T5gsuZSmm/co5xiQ6UseiWGwq2KMjV1tkk6+mu5hQHyiSyACkzL\nl+GRfJEmd6RMBq8QXO9z9VHYcFKmGUaRKzRvkv4n2LmAw3JefHeQpXOpaA+IscPt\ncPdK00TK+kcW3uU8Ulf0aY4ZEYHPTXPoYQv0WTYD6s9ni/jp9YYESD0uKVgiP+4r\nAnoE0XepBcLYHifu8ekRdZZX2OlfJ019i4iMZ2htyUL2EKHyjiyE5o/L2UgXsLAl\nG2IIUu23cMqMAllZ6f9dtsAYVUfDpPoOTfjEAMBV0wKBgQDfp9zIi4VztD7DwWDH\nnrddWtsgEPtNealjyV1akzcLrKkwK/Vwkd/mVX+QwwMFiYxRjd/qhWK65OiLOXOV\nVNDce8E/lD9QUIZHiAv45T4GXb3F48EMVkXCsD9gxfQcGxtanijoitNtsBtLgsk+\nq+DeE8CgOS/KUFObQKTQ+L4kBwKBgQDHyboJtOCHDNQiG4N42IPvMOFgA4cECRUP\nHKIocCHdH+piJwZEwspFYo8aq9V1yZvxgsJyqq1vUk88wXU2YUJfbUhupURaRFUY\nYYxLbcTYmP93hWb9YT40txt9VAhawk/xINaHK14NQw8YzeiSVJXRsbyIf30IlKFE\nKvG+g8JO8wKBgQDEQyPFgFm9bQBe+8UXpzm1XFNJ0l0UYZy5iiy3nNQDFKLrOMgK\n3peiIojs2ZQ/ObK+pkdGH4LCCrnd4q6A7orR0G+GgWsF6YPMJaCL628AWyZ7Dx+K\n2fIhpFQZcdyDBW59mKjBV4GtkYqCOuSqcF3Fw4OXlldPrCmR5ao8Duub5QKBgQCo\nv5e2eSOojkpjYK/kk6SklLnYOkKBQxaZhArncwb3WezD6MhfrdPhVUUgNwF+ksJ3\n9IU/CzCgtXoeDB1vyCiip5ClfExGni7t//7a+yVn+ZrWHkSGQeuj5QGAE0lXN4cE\nWUM6OoQfWYPX5JvLdUxyKNjgxiYa6EdqZ4d27p1hxwKBgAxXXQXbR6wx8R3gBbR1\n0pjLH6V9NGcMTSpHycxbgasRs3Jlyoonw7EUW0ASmnWvdR4F2oosDnF+oJbAgJkN\nwCW6v1a3cF+a1a+J3XpNcof7D7/jIisgOPY8kFCeX837D/7WoH/h30v6U6TpYzSR\n6MeMyH3nsh9wa6u1EhwCz6dw\n-----END PRIVATE KEY-----\n",
+  "client_email": "therapy-bot-llm@gen-lang-client-0102375772.iam.gserviceaccount.com",
+  "client_id": "116416384614549959712",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/therapy-bot-llm%40gen-lang-client-0102375772.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
