@@ -28,7 +28,7 @@ for msg in st.session_state.messages:
     if msg["sender"] == "user":
         st.markdown(f"**You:** {msg['text']}")
     else:
-        st.markdown(f"**Bot:** {msg['text']}")
+        st.markdown(f"**Healix:** {msg['text']}")
 
 # Input box
 if user_input := st.chat_input("Type your message..."):
@@ -44,7 +44,7 @@ if user_input := st.chat_input("Type your message..."):
     try:
         with st.spinner("Thinking..."):
             response = requests.post(
-                "http://127.0.0.1:8000/api/v1/chat",
+                "https://therapy-bot-o8uo.onrender.com/api/v1/chat",
                 json=payload,
                 timeout=30
             )

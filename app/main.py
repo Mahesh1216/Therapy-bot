@@ -11,6 +11,8 @@ app = FastAPI(
 # CORS configuration
 origins = [
     "http://localhost:8501",
+    "https://*.streamlit.app",  # Allow all streamlit apps
+    "https://therapy-bot-o8uo.onrender.com", # Allow deployed backend
     "http://localhost:3000",
     "http://localhost:8000",
     "http://localhost:3001",
