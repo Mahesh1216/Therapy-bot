@@ -112,3 +112,8 @@ dmypy.json
 key.json
 /key.json
 *.json
+
+# IDE and project planning files
+.cursor/
+rules.md
+*.pdf
