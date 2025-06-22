@@ -31,11 +31,10 @@ for msg in st.session_state.messages:
         st.markdown(f"**Bot:** {msg['text']}")
 
 # Input box
-user_input = st.text_input("Type your message...", key="input")
-
-if st.button("Send") and user_input.strip():
+if user_input := st.chat_input("Type your message..."):
     # Add user message to history
     st.session_state.messages.append({"text": user_input, "sender": "user"})
+
     # Prepare payload for FastAPI backend
     payload = {
         "message": user_input,
@@ -43,18 +42,21 @@ if st.button("Send") and user_input.strip():
         "persona": st.session_state.persona
     }
     try:
-        response = requests.post(
-            "http://127.0.0.1:8000/api/v1/chat",
-            json=payload,
-            timeout=30
-        )
-        if response.ok:
-            data = response.json()
-            st.session_state.messages.append({"text": data["response"], "sender": "bot"})
-        else:
-            st.session_state.messages.append({"text": "Sorry, backend error.", "sender": "bot"})
+        with st.spinner("Thinking..."):
+            response = requests.post(
+                "http://127.0.0.1:8000/api/v1/chat",
+                json=payload,
+                timeout=30
+            )
+            if response.ok:
+                data = response.json()
+                st.session_state.messages.append({"text": data["response"], "sender": "bot"})
+            else:
+                st.session_state.messages.append({"text": "Sorry, backend error.", "sender": "bot"})
     except Exception as e:
         st.session_state.messages.append({"text": f"Error: {e}", "sender": "bot"})
+    
+    st.rerun()
 
 # New session button
 if st.button("New Session"):
