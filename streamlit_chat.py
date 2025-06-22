@@ -60,4 +60,4 @@ if st.button("Send") and user_input.strip():
 if st.button("New Session"):
     st.session_state.messages = []
     st.session_state.persona = "professional"
-    st.experimental_rerun() 
+    st.rerun() 
