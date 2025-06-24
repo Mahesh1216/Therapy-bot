@@ -5,8 +5,14 @@ pydantic
 pydantic-settings
 python-dotenv
 google-generativeai
-pinecone-client
-
+pinecone  # Official Pinecone SDK v4+
+PyPDF2  # PDF processing
+langchain  # Text chunking and processing
+sentence-transformers  # For text embeddings
+numpy  # Required for vector operations
+tqdm  # Progress bars
+requests  # For web scraping
+beautifulsoup4  # For HTML parsing
 # Development Dependencies
 pytest
 httpx

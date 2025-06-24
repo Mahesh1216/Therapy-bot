@@ -24,11 +24,42 @@ else:
     st.write(f"**Persona:** {PERSONAS[st.session_state.persona]} (locked for this session)")
 
 # Chat history display
-for msg in st.session_state.messages:
+for i, msg in enumerate(st.session_state.messages):
     if msg["sender"] == "user":
         st.markdown(f"**You:** {msg['text']}")
     else:
         st.markdown(f"**Healix:** {msg['text']}")
+        # Feedback buttons for the last bot message
+        if i == len(st.session_state.messages) - 1:
+            if "feedback" not in st.session_state:
+                st.session_state.feedback = []
+            col1, col2 = st.columns(2)
+            with col1:
+                if st.button("👍 Like", key=f"like_{i}"):
+                    st.session_state.feedback.append({"msg_idx": i, "feedback": "like"})
+                    # Send feedback to backend
+                    requests.post(
+                        "https://therapy-bot-o8uo.onrender.com/api/v1/feedback",
+                        json={
+                            "feedback": "like",
+                            "message": st.session_state.messages[i]["text"],
+                            "history": [m["text"] for m in st.session_state.messages[:i] if m["sender"] == "user"]
+                        },
+                        timeout=10
+                    )
+            with col2:
+                if st.button("👎 Dislike", key=f"dislike_{i}"):
+                    st.session_state.feedback.append({"msg_idx": i, "feedback": "dislike"})
+                    # Send feedback to backend
+                    requests.post(
+                        "https://therapy-bot-o8uo.onrender.com/api/v1/feedback",
+                        json={
+                            "feedback": "dislike",
+                            "message": st.session_state.messages[i]["text"],
+                            "history": [m["text"] for m in st.session_state.messages[:i] if m["sender"] == "user"]
+                        },
+                        timeout=10
+                    )
 
 # Input box
 if user_input := st.chat_input("Type your message..."):

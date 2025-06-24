@@ -1,4 +1,5 @@
 from pydantic_settings import BaseSettings
+from typing import Optional
 
 class Settings(BaseSettings):
     """
@@ -6,6 +7,10 @@ class Settings(BaseSettings):
     """
     GEMINI_API_KEY: str
     PINECONE_API_KEY: str
+    PINECONE_ENV: str = "gcp-starter"  # Default to free tier environment
+    
+    # Paths
+    THERAPY_GUIDES_DIR: str = "Therapy_Guides"
 
     class Config:
         env_file = ".env"

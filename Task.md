@@ -53,6 +53,23 @@
   - [ ] Gemini API responding to test queries
   - [ ] Pinecone connection established
   - [ ] **AI GENERATE**: Basic connection test scripts
+- [ ] **CRITICAL**: Build RAG System for Therapy Knowledge Base [COMPLEX]
+  - [ ] Ingest and index all text-based PDFs from `Therapy_Guides/` (ignore images)
+  - [ ] One-time web crawl and extract relevant worksheets/guides from: TherapistAid (Worksheets), VerywellMind (Topic guides), Mind.org.uk (Worksheets & self-guides), NHS (Mental health guides)
+  - [ ] Chunk and embed all content for semantic retrieval
+  - [ ] Store embeddings in Pinecone vector database
+  - [ ] Implement retrieval logic to fetch relevant content based on user query and persona
+  - [ ] Integrate with Gemini API: pass persona, user query, and retrieved context for response generation
+  - [ ] Ensure response is empathetic, supportive, and includes exercises if relevant
+  - [ ] If no relevant content is found, allow Gemini API to respond without context
+  - [ ] Add unit tests for PDF ingestion, web crawling, retrieval, and RAG pipeline
+  - [ ] Document setup and usage in README
+  - **Dependencies:** Pinecone and Gemini API setup, Persona selection in Streamlit
+  - **Acceptance Criteria:**
+    - User query retrieves relevant worksheets/guides/CBT methods from PDFs and web
+    - Gemini API generates persona-aware, empathetic, and actionable responses
+    - System gracefully handles cases with no relevant content
+    - All new code is tested and documented
 
 ### Project Structure [MEDIUM]
 - [✅] Create project directory structure (follow PLANNING.md structure)
