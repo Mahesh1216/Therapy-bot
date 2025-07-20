@@ -8,7 +8,7 @@ pinecone
 PyPDF2
 requests
 beautifulsoup4
-numpy
+numpy<2
 tqdm
 datasets
 langchain
