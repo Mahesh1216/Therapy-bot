@@ -1,0 +1,15 @@
+# Ignore data, cache, and virtualenv folders
+local_psych8k/
+local_mental_health_counseling/
+local_counsel_chat/
+Therapy_Guides/
+empatheticdialogues/
+venv/
+.venv/
+__pycache__/
+.pytest_cache/
+.cursor/
+.devcontainer/
+*.db
+*.pdf
+*.csv
