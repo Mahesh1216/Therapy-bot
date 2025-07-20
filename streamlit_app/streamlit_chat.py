@@ -8,6 +8,9 @@ PERSONAS = {
     "yap": "Yap (Gen-Z Friend)"
 }
 
+# Update API URLs to Railway deployment
+RAILWAY_API_BASE = "https://therapy-bot-production.up.railway.app/api/v1"
+
 st.title("Therapeutic Chatbot")
 
 # Session state for chat history and persona
@@ -39,7 +42,7 @@ for i, msg in enumerate(st.session_state.messages):
                     st.session_state.feedback.append({"msg_idx": i, "feedback": "like"})
                     # Send feedback to backend
                     requests.post(
-                        "https://therapy-bot-o8uo.onrender.com/api/v1/feedback",
+                        f"{RAILWAY_API_BASE}/feedback",
                         json={
                             "feedback": "like",
                             "message": st.session_state.messages[i]["text"],
@@ -52,7 +55,7 @@ for i, msg in enumerate(st.session_state.messages):
                     st.session_state.feedback.append({"msg_idx": i, "feedback": "dislike"})
                     # Send feedback to backend
                     requests.post(
-                        "https://therapy-bot-o8uo.onrender.com/api/v1/feedback",
+                        f"{RAILWAY_API_BASE}/feedback",
                         json={
                             "feedback": "dislike",
                             "message": st.session_state.messages[i]["text"],
@@ -75,7 +78,7 @@ if user_input := st.chat_input("Type your message..."):
     try:
         with st.spinner("Thinking..."):
             response = requests.post(
-                "https://therapy-bot-o8uo.onrender.com/api/v1/chat",
+                f"{RAILWAY_API_BASE}/chat",
                 json=payload,
                 timeout=30
             )
